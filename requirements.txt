@@ -1,0 +1,35 @@
+# Crypto Arbitrage Bot - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core trading library with Ed25519 support for Coinbase
+ccxt>=4.5.4
+
+# Web framework (for optional dashboard)
+flask==3.0.0
+flask-socketio==5.3.6
+
+# HTTP requests
+requests==2.31.0
+
+# Data processing
+pandas==2.1.4
+numpy==1.24.3
+
+# Environment management
+python-dotenv==1.0.0
+
+# Task scheduling
+schedule==1.2.0
+
+# WebSocket support
+websocket-client==1.6.4
+
+# Exchange-specific libraries
+python-binance==1.0.19
+krakenex==2.1.0
+
+# Async support
+aiohttp==3.9.1
+
+# JSON handling
+json5==0.9.14
