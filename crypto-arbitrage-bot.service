@@ -1,0 +1,24 @@
+[Unit]
+Description=Crypto Arbitrage Trading Bot
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/crypto_arbitrage_bot
+ExecStart=/home/ubuntu/crypto_arbitrage_bot/venv/bin/python main.py
+Restart=always
+RestartSec=10
+EnvironmentFile=/home/ubuntu/crypto_arbitrage_bot/.env
+
+# Logging
+StandardOutput=append:/home/ubuntu/crypto_arbitrage_bot/logs/bot.log
+StandardError=append:/home/ubuntu/crypto_arbitrage_bot/logs/bot_error.log
+
+# Security hardening
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
